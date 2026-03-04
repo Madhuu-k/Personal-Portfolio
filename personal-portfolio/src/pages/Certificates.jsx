@@ -56,7 +56,7 @@ const cardVariants = {
 export default function Certificates() {
   return (
     <div className="certificates-section">
-      <PageTitle title="RUNES EARNED" centered />
+      <PageTitle title="CERTIFICATIONS" centered />
 
       <motion.div
         className="certificates-container"

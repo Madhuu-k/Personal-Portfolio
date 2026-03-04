@@ -4,39 +4,30 @@ import PageTitle from "../components/PageTitle";
 const contactData = [
   { title: "GITHUB",   link: "https://github.com/Madhuu-k" },
   { title: "LINKEDIN", link: "https://www.linkedin.com/in/madhuu-k/" },
-  { title: "EMAIL",    link: "mailto:madhusudhan2k6@gmail.com" }
+  { title: "EMAIL",    link: "mailto:madhusudhan2k6@gmail.com" },
+  { title: "RESUME",   link: "/resume.pdf", download: true },
 ];
 
 const containerVariants = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.18 }
-  }
+  visible: { transition: { staggerChildren: 0.15 } }
 };
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] }
-  }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }
 };
 
 export default function Contact() {
   return (
     <div className="contact-container">
       <motion.div
-        initial={{ opacity: 0, y: 25 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
-        <PageTitle
-          title="SUMMON"
-          info="SUMMON THE ENGINEER"
-          centered
-        />
+        <PageTitle title="SUMMON" info="Summon the engineer" centered />
       </motion.div>
 
       <motion.div
@@ -50,14 +41,15 @@ export default function Contact() {
           <motion.a
             key={contact.title}
             href={contact.link}
-            target="_blank"
+            target={contact.download ? "_self" : "_blank"}
             rel="noopener noreferrer"
-            className="contact-link"
+            download={contact.download || undefined}
+            className={`contact-link${contact.title === "RESUME" ? " contact-link--resume" : ""}`}
             variants={cardVariants}
             whileHover={{ y: -5, scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <span>{contact.title}</span>
+            <span>{contact.title === "RESUME" ? "↓ RESUME" : contact.title}</span>
           </motion.a>
         ))}
       </motion.div>
@@ -67,7 +59,7 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.8, duration: 0.9 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
       >
         © 2026 Madhu. All rights reserved.
       </motion.p>

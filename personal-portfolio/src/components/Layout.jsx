@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SideNav from "./SideNav.jsx";
+import LiveIndicator from "./LiveIndicator.jsx";
 
 export default function Layout({ sections, children }) {
   return (
@@ -9,7 +10,7 @@ export default function Layout({ sections, children }) {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Page frame — constrains content + nav together */}
+      <LiveIndicator />
       <div className="page-frame">
         <SideNav sections={sections} />
         <main>{children}</main>

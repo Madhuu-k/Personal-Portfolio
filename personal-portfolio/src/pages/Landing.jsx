@@ -1,58 +1,63 @@
+import { motion } from "framer-motion";
 import PageTitle from '../components/PageTitle.jsx';
 import Button from '../components/Button.jsx';
-import { motion } from "framer-motion";
 
-const containerVariants = {
-  hidden: {},
+const fade = (delay, y = 20) => ({
+  hidden: { opacity: 0, y },
   visible: {
-    transition: { staggerChildren: 0.4 }
+    opacity: 1, y: 0,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1], delay }
   }
-};
-
-const textVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] }
-  }
-};
+});
 
 export default function Landing({ onStart }) {
   return (
     <motion.div
-      className='landing-container'
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
+      className="landing-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
     >
-      {/* Four corner decorations */}
-      <div className='corner-tl'></div>
-      <div className='corner-bl'></div>
+      <motion.div
+        className="arena-glow"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.4, delay: 0.1 }}
+      />
 
-      {/* System Status - top center */}
-      <motion.div className='sys-status' variants={textVariants}>
+      <div className="corner-tl" />
+      <div className="corner-bl" />
+
+      {/* System status — top right, 0.2s */}
+      <motion.div className="sys-status" variants={fade(0.2)} initial="hidden" animate="visible">
         <p className="status-text">SYSTEM STATUS: ONLINE</p>
       </motion.div>
 
-      {/* Main Title */}
-      <motion.div variants={textVariants}>
-        <PageTitle
-          title="HELLO, I'M MADHU"
-          info="SOFTWARE ENGINEER"
-          centered
-        />
+      {/* Name — 0.4s */}
+      <motion.div variants={fade(0.4, 40)} initial="hidden" animate="visible">
+        <PageTitle title="HELLO, I'M MADHU" info="SOFTWARE ENGINEER" />
       </motion.div>
 
-      {/* CTA Button */}
-      <motion.div className='landing-body' variants={textVariants}>
-        <Button text="PRESS ENTER TO BEGIN" onClick={onStart} />
+      {/* Buttons — 1.8s */}
+      <motion.div className="landing-body" variants={fade(1.8)} initial="hidden" animate="visible">
+        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+          <Button text="ENTER THE ARENA" onClick={onStart} />
+        </motion.div>
+        <motion.a
+          href="/Madhu's_Resume.pdf"
+          download
+          className="resume-btn"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          ↓ &nbsp; DOWNLOAD RESUME
+        </motion.a>
       </motion.div>
 
-      {/* Version bottom center */}
-      <div className='version-info'>
+      {/* Version — 2.3s */}
+      <motion.div className="version-info" variants={fade(2.3)} initial="hidden" animate="visible">
         <p>v2.0.24 // THE TARNISHED SYSTEM</p>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
