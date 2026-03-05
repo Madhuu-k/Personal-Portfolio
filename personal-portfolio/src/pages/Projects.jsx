@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import PageTitle from "../components/PageTitle";
-import plantdiseaseImg from "./plantdisease.jpg"; // ← import directly 
-import heartDiseaseImg from "./heartdisease.png"; // ← import directly
-import sudarshanImg from "./sudarshan.png"; // ← import directly
-import pushupCounterImg from "./pushup-counter.png"; // ← import directly
-import apexStockImg from "./apexStock.jpg"; // ← import directly
-import talksmackImg from "./talksmack.png"; // ← import directly
+import plantdiseaseImg from "./images/plantdisease.jpg"; // ← import directly 
+import heartDiseaseImg from "./images/heartdisease.png"; // ← import directly
+import sudarshanImg from "./images/sudarshan.png"; // ← import directly
+import pushupCounterImg from "./images/pushup-counter.png"; // ← import directly
+import apexStockImg from "./images/apexStock.jpg"; // ← import directly
+import talksmackImg from "./images/talksmack.png"; // ← import directly
 
 const projectsData = [
   {
