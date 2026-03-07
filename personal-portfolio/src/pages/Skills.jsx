@@ -7,7 +7,7 @@ const skillsData = [
   { category: "PROGRAMMING LANGUAGES",  items: ["Java", "Python", "C/C++", "JavaScript" ] },
   { category: "BACKEND & FULL-STACK",   items: ["React", "Flask/FastAPI", "REST APIs", "PostgreSQL"] },
   { category: "MACHINE LEARNING",  items: ["Computer Vision", "Neural Networks", "Deep Learning", "Model Training & Evaluation"] },
-  { category: "COMPUTER SCIENCE CORE", items: ["Data Structures & Algorithms", "Version Control (Git & GitHub)", "Operating Systems", "DevOps Fundamentals (Docker, CI/CD, Kubernetes)"] }
+  { category: "CORE FUNDAMENTALS", items: ["Data Structures & Algorithms", "Version Control (Git & GitHub)", "Operating Systems", "DevOps Fundamentals (Docker, CI/CD, Kubernetes)"] }
 ];
 
 const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.2 } } };
@@ -19,7 +19,7 @@ const cardVariants = {
 export default function Skills() {
   return (
     <div className="skills-container">
-      <PageTitle title="TECH STACK" info="Tools forged through discipline" />
+      <PageTitle title="THE ARSENAL" info="Tools forged through discipline" />
 
       <motion.div
         className="skills-grid"

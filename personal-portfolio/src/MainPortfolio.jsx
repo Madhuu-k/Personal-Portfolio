@@ -29,7 +29,7 @@ export default function MainPortfolio() {
       </section>
 
       <section ref={sections.about}>
-        <Checkpoint point="THE TARNISHED" />
+        <Checkpoint point="MEET THE ENGINEER" />
         <About />
       </section>
 

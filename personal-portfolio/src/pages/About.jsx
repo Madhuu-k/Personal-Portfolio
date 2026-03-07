@@ -28,12 +28,21 @@ export default function About() {
       {/* Content — left aligned */}
       <motion.div className="about-content" variants={containerVariants}>
         <motion.p variants={textVariants}>
-          Forged through repetition, failure, and discipline. I believe strong systems are built on fundamentals, not shortcuts.
+          Hello — I'm Madhu, a Computer Science student focused on software engineering and system design.
+          I enjoy building reliable systems, solving complex problems, and turning ideas into working software.
+        </motion.p>
+
+        <motion.p variants={textVariants}>
+          Currently, I’m focused on pushing deeper into machine learning and intelligent systems. 
+I build projects that combine real-time computer vision, data-driven models, and scalable pipelines — 
+turning raw data into systems that actually perform when the pressure is on.
         </motion.p>
         <motion.p variants={textVariants}>
-          I focus on understanding problems deeply, designing solutions carefully, and executing with control.
+          My approach to engineering is simple.
         </motion.p>
         <motion.p variants={textVariants}>
+          I believe strong systems are built on fundamentals, not shortcuts.
+          I focus on understanding problems deeply, designing solutions carefully, and executing with precision.
           I don't chase tools. I master foundations — then scale.
         </motion.p>
       </motion.div>

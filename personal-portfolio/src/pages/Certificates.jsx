@@ -2,14 +2,13 @@ import { motion } from "framer-motion";
 import PageTitle from "../components/PageTitle";
 import mongoDB from "./images/MONGODB.jpg"; 
 import oracle from "./images/ORACLE.png";
-import pythonUdem from "./images/PYTHON-UDEM.png"
-import virtualIntern from "./images/VIR-INT.png"
+import pythonUdem from "./images/PYTHON-UDEM.png";
+import virtualIntern from "./images/VIR-INT.png";
+import mongodbCert from "./pdfs/mongodbAssc.pdf"
+import oracleCert from "./pdfs/oracleGenAi.pdf";
+import pythoncert from "./pdfs/PYTHON-UDEM.jpg"
+import virtualInternCert from "./pdfs/virtualIntern.pdf";
 
-/**
- * Add cert images by importing them at the top:
- *   import az900 from "../assets/certs/az900.png";
- * Then set image: az900 in the cert object.
- */
 const certs = [
   {
     id: "cert-1",
@@ -17,7 +16,8 @@ const certs = [
     issuer: "MongoDB University",
     date: "2025",
     image: mongoDB,
-    link: "#",
+    view: "https://drive.google.com/file/d/1FeA6IWdk1YwsKtpFXyT-i-P8LTZoiY4z/view?usp=drive_link",       // replace with credential URL
+    download: mongodbCert, // downloads the PDF directly
   },
   {
     id: "cert-2",
@@ -25,23 +25,26 @@ const certs = [
     issuer: "Oracle",
     date: "2025",
     image: oracle,
-    link: "#",
+    view: "https://drive.google.com/file/d/1vUvN5KtAfq3KNlBXblXNxemPVa0lbFFw/view?usp=sharing",
+    download: oracleCert,
   },
   {
     id: "cert-3",
-    title: "Python From Zero to Hero",
+    title: "Python Programming Certification",
     issuer: "Udemy",
     date: "2024",
     image: pythonUdem,
-    link: "#",
+    view: "https://drive.google.com/file/d/1Z9NtmWhwVi-Jl6M9J0Lbx3rZzJLpPgQu/view?usp=sharing",
+    download: pythoncert,
   },
   {
     id: "cert-4",
     title: "Virtual Internship Program",
     issuer: "SkillDzire",
-    date: "2023",
+    date: "2024",
     image: virtualIntern,
-    link: "#",
+    view: "https://drive.google.com/file/d/17M0o8VP2PfFrWmr-qo5ADgjFVydUnAki/view?usp=sharing",
+    download: virtualInternCert,
   },
 ];
 
@@ -68,11 +71,8 @@ export default function Certificates() {
         viewport={{ once: true, amount: 0.15 }}
       >
         {certs.map((cert) => (
-          <motion.a
+          <motion.div
             key={cert.id}
-            href={cert.link}
-            target="_blank"
-            rel="noopener noreferrer"
             className="cert-card"
             variants={cardVariants}
           >
@@ -87,15 +87,36 @@ export default function Certificates() {
             {/* Gradient fade */}
             <div className="cert-img-fade" />
 
-            {/* Text — always at bottom */}
+            {/* Text + buttons — always at bottom */}
             <div className="cert-body">
               <h3 className="cert-title">{cert.title}</h3>
               <div className="cert-meta">
                 <span className="cert-issuer">{cert.issuer}</span>
                 <span className="cert-date">{cert.date}</span>
               </div>
+
+              {/* View + Download buttons */}
+              <div className="cert-actions">
+                <a
+                  href={cert.view}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cert-btn cert-btn--view"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <span>↗ VIEW</span>
+                </a>
+                <a
+                  href={cert.download}
+                  download={`${cert.title}.png`}
+                  className="cert-btn cert-btn--download"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <span>↓ DOWNLOAD</span>
+                </a>
+              </div>
             </div>
-          </motion.a>
+          </motion.div>
         ))}
       </motion.div>
     </div>

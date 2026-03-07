@@ -40,11 +40,11 @@ export default function SideNav({ sections }) {
   };
 
   const NavItems = [
-    { key: "about",        label: "THE TARNISHED" },
+    { key: "about",        label: "ABOUT ME" },
     { key: "skills",       label: "THE ARSENAL" },
-    { key: "projects",     label: "BATTLES" },
-    { key: "certificates", label: "RUNES" },
-    { key: "contact",      label: "SUMMON" }
+    { key: "projects",     label: "SYSTEMS BUILT" },
+    { key: "certificates", label: "CERTIFICATES" },
+    { key: "contact",      label: "CONTACT INFO" }
   ];
 
   const isOnLanding = activeSection === "landing";

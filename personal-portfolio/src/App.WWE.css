@@ -632,7 +632,19 @@ body::after {
   margin: 0 auto;
 }
 .projects-container .page-title { text-align: center; margin-bottom: 0; }
-.projects-container .page-title p { display: none; }
+.projects-container .page-title p {
+  display: block !important;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(232,224,208,0.5);
+  letter-spacing: 0.08em;
+  text-transform: none;
+  margin-top: 0.7rem;
+  max-width: 580px;
+  line-height: 1.6;
+  -webkit-text-fill-color: rgba(232,224,208,0.5);
+}
 
 .projects-grid {
   display: grid;
@@ -1489,7 +1501,7 @@ body::after {
 
 /* ── Project btn — scoped override, highest priority ── */
 a.project-btn {
-  font-size: 0.48rem !important;
+  font-size: 0.88rem !important;
   padding: 0.08rem 0.38rem !important;
   line-height: 1.5 !important;
   letter-spacing: 0.12em !important;
@@ -1501,3 +1513,44 @@ a.project-btn {
 /* Hide about photo completely */
 .about-image { display: none !important; }
 .about-image-placeholder { display: none !important; }
+
+/* ===== CERT ACTION BUTTONS ===== */
+.cert-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.cert-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.5);
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.cert-btn--view {
+  border-color: rgba(212,160,23,0.4);
+  color: var(--gold);
+}
+.cert-btn--view:hover {
+  background: rgba(212,160,23,0.15);
+  border-color: var(--gold);
+  color: var(--white);
+}
+
+.cert-btn--download {
+  border-color: rgba(204,0,0,0.4);
+  color: rgba(204,0,0,0.8);
+}
+.cert-btn--download:hover {
+  background: rgba(204,0,0,0.15);
+  border-color: var(--red);
+  color: var(--white);
+}

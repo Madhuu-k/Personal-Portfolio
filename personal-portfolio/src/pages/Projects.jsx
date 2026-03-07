@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 import PageTitle from "../components/PageTitle";
-import plantdiseaseImg from "./images/plantdisease.jpg"; // ← import directly 
-import heartDiseaseImg from "./images/heartdisease.png"; // ← import directly
-import sudarshanImg from "./images/sudarshan.png"; // ← import directly
-import pushupCounterImg from "./images/pushup-counter.png"; // ← import directly
-import apexStockImg from "./images/apexStock.jpg"; // ← import directly
-import talksmackImg from "./images/talksmack.png"; // ← import directly
+import plantdiseaseImg from "./images/plantdisease.jpg";
+import heartDiseaseImg from "./images/heartdisease.png";
+import sudarshanImg from "./images/sudarshan.png";
+import pushupCounterImg from "./images/pushup-counter.png";
+import apexStockImg from "./images/apexStock.jpg";
+import talksmackImg from "./images/talksmack.png";
 
 const projectsData = [
   {
     id: "pushup-counter",
     title: "AI PUSHUP COUNTER",
-    description: "ML-Based Pose Estimation System for Pushup Reps",
+    description: "Real-time pose estimation system detecting pushups using OpenCV & MediaPipe.",
     stack: ["Python", "Scikit-learn", "OpenCV"],
     image: pushupCounterImg,
     github: "https://github.com/Madhuu-k/Pushup-Counter",
@@ -77,7 +77,11 @@ const cardVariants = {
 export default function Projects() {
   return (
     <div className="projects-container">
-      <PageTitle title="SYSTEMS BUILT" info="Systems engineered through experience" centered />
+      <PageTitle
+        title="SYSTEMS I BUILT"
+        info="Projects where I applied engineering principles to build real working systems."
+        centered
+      />
 
       <motion.div
         className="projects-grid"
