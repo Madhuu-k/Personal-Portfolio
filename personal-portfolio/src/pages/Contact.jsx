@@ -43,7 +43,7 @@ export default function Contact() {
             href={contact.link}
             target={contact.download ? "_self" : "_blank"}
             rel="noopener noreferrer"
-            download={contact.download ? "Madhu-Sudhan-Rao-Resume.pdf" : undefined}
+            download={contact.download ? "./pdfs/MadhuResume.pdf" : undefined}
             className={`contact-link${contact.title === "RESUME" ? " contact-link--resume" : ""}`}
             variants={cardVariants}
             whileHover={{ y: -5, scale: 1.03 }}
