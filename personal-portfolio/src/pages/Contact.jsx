@@ -5,7 +5,7 @@ const contactData = [
   { title: "GITHUB",   link: "https://github.com/Madhuu-k" },
   { title: "LINKEDIN", link: "https://www.linkedin.com/in/madhuu-k/" },
   { title: "EMAIL",    link: "mailto:madhusudhan2k6@gmail.com" },
-  { title: "RESUME",   link: "./pdfs/madhu_resume.pdf", download: true },
+  { title: "RESUME",   link: "./pdfs/MadhuResume.pdf", download: true },
 ];
 
 const containerVariants = {
@@ -27,7 +27,7 @@ export default function Contact() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <PageTitle title="SUMMON" info="Summon the engineer" centered />
+        <PageTitle title="CONTACT ME" info="The Best in The Code" centered />
       </motion.div>
 
       <motion.div
@@ -43,7 +43,7 @@ export default function Contact() {
             href={contact.link}
             target={contact.download ? "_self" : "_blank"}
             rel="noopener noreferrer"
-            download={contact.download || undefined}
+            download={contact.download ? "Madhu-Sudhan-Rao-Resume.pdf" : undefined}
             className={`contact-link${contact.title === "RESUME" ? " contact-link--resume" : ""}`}
             variants={cardVariants}
             whileHover={{ y: -5, scale: 1.03 }}
@@ -61,7 +61,7 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ delay: 0.8, duration: 0.8 }}
       >
-        © 2026 Madhu. All rights reserved.
+        © 2026 MADHU SUDHAN RAO • BUILT WITH REACT
       </motion.p>
     </div>
   );

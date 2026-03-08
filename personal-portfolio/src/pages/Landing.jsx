@@ -45,7 +45,7 @@ export default function Landing({ onStart }) {
         </motion.div>
         <motion.a
           href="./pdfs/madhu_resume.pdf"
-          download
+          download="madhu-sudhan-rao-resume.pdf"
           className="resume-btn"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.97 }}
