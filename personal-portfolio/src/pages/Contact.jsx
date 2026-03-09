@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 import PageTitle from "../components/PageTitle";
 
 const contactData = [
-  { title: "GITHUB",   link: "https://github.com/Madhuu-k" },
-  { title: "LINKEDIN", link: "https://www.linkedin.com/in/madhuu-k/" },
-  { title: "EMAIL",    link: "mailto:madhusudhan2k6@gmail.com" },
-  { title: "RESUME",   link: "https://raw.githubusercontent.com/Madhuu-k/Personal-Portfolio/main/personal-portfolio/MadhuResume.pdf", download: true },
+  { title: "GITHUB",   link: "https://github.com/Madhuu-k",                                                                                          target: "_blank" },
+  { title: "LINKEDIN", link: "https://www.linkedin.com/in/madhuu-k/",                                                                                target: "_blank" },
+  { title: "RESUME",   link: "https://raw.githubusercontent.com/Madhuu-k/Personal-Portfolio/main/personal-portfolio/MadhuResume.pdf", download: true, target: "_self"  },
 ];
 
 const containerVariants = {
@@ -41,9 +40,9 @@ export default function Contact() {
           <motion.a
             key={contact.title}
             href={contact.link}
-            target={contact.download ? "_self" : "_blank"}
+            target={contact.target}
             rel="noopener noreferrer"
-            download={contact.download ? "./pdfs/MadhuResume.pdf" : undefined}
+            download={contact.download ? "MadhuResume.pdf" : undefined}
             className={`contact-link${contact.title === "RESUME" ? " contact-link--resume" : ""}`}
             variants={cardVariants}
             whileHover={{ y: -5, scale: 1.03 }}
@@ -53,6 +52,18 @@ export default function Contact() {
           </motion.a>
         ))}
       </motion.div>
+
+      {/* Email line */}
+      <motion.p
+        className="contact-email"
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+      >
+        REACH OUT AT&nbsp;
+        <span className="contact-email-address">madhusudhan2k6@gmail.com</span>
+      </motion.p>
 
       <motion.p
         className="contact-footer"

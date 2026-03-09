@@ -1501,7 +1501,7 @@ body::after {
 
 /* ── Project btn — scoped override, highest priority ── */
 a.project-btn {
-  font-size: 0.88rem !important;
+  font-size: 0.48rem !important;
   padding: 0.08rem 0.38rem !important;
   line-height: 1.5 !important;
   letter-spacing: 0.12em !important;
@@ -1523,8 +1523,8 @@ a.project-btn {
 
 .cert-btn {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.55rem;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
@@ -1553,4 +1553,21 @@ a.project-btn {
   background: rgba(204,0,0,0.15);
   border-color: var(--red);
   color: var(--white);
+}
+/* ===== CONTACT EMAIL TEXT ===== */
+.contact-email {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(232,224,208,0.4);
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: -50px;
+}
+
+.contact-email-address {
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
