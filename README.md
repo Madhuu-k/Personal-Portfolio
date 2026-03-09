@@ -1,4 +1,4 @@
-# ⚔️ Madhu Sudhan Rao — Personal Portfolio
+# ⚔️ Madhu Sudhan — Personal Portfolio
 
 Welcome to my personal portfolio.
 
@@ -11,7 +11,21 @@ The portfolio is designed with a battle/arena theme inspired by game UI design t
 ## 🌐 Live Portfolio
 
 🚀 Live Site:  
-https://your-vercel-link.vercel.app
+Just launched my personal portfolio website.
+
+I wanted something that reflects how I approach engineering — focused on fundamentals, system thinking, and building things that actually work.
+
+
+
+Built using React, Framer Motion, and deployed with Vercel.
+
+Take a look:
+🌐 https://madhu-sudhan-portfolio.vercel.app
+
+Always happy to connect and hear feedback.
+
+#softwareengineering #machinelearning #reactjs #computervision
+
 
 ---
 
