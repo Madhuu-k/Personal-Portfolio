@@ -44,7 +44,7 @@ export default function Landing({ onStart }) {
           <Button text="ENTER THE ARENA" onClick={onStart} />
         </motion.div>
         <motion.a
-          href="./pdfs/MadhuResume.pdf"
+          href="https://raw.githubusercontent.com/Madhuu-k/Personal-Portfolio/main/personal-portfolio/MadhuResume.pdf"
           download="Madhu-Sudhan-Rao-Resume.pdf"
           className="resume-btn"
           whileHover={{ scale: 1.02 }}

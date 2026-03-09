@@ -5,7 +5,7 @@ const contactData = [
   { title: "GITHUB",   link: "https://github.com/Madhuu-k" },
   { title: "LINKEDIN", link: "https://www.linkedin.com/in/madhuu-k/" },
   { title: "EMAIL",    link: "mailto:madhusudhan2k6@gmail.com" },
-  { title: "RESUME",   link: "./pdfs/MadhuResume.pdf", download: true },
+  { title: "RESUME",   link: "https://raw.githubusercontent.com/Madhuu-k/Personal-Portfolio/main/personal-portfolio/MadhuResume.pdf", download: true },
 ];
 
 const containerVariants = {
