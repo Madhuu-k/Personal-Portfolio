@@ -4,7 +4,7 @@ import PageTitle from "../components/PageTitle";
 const contactData = [
   { title: "GITHUB",   link: "https://github.com/Madhuu-k",                                                                                          target: "_blank" },
   { title: "LINKEDIN", link: "https://www.linkedin.com/in/madhuu-k/",                                                                                target: "_blank" },
-  { title: "RESUME",   link: "https://raw.githubusercontent.com/Madhuu-k/Personal-Portfolio/main/personal-portfolio/MadhuResume.pdf", download: true, target: "_self"  },
+  { title: "RESUME",   link: "https://raw.githubusercontent.com/Madhuu-k/Personal-Portfolio/main/personal-portfolio/Madhu_Sudhan_ML_Resume.pdf", download: true, target: "_self"  },
 ];
 
 const containerVariants = {
